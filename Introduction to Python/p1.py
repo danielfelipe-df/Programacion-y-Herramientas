@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
+import math
 print ('Este es un primer programa en python')
 a=10
 b=20.
