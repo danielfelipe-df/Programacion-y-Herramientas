@@ -6,12 +6,12 @@ title("Ejercicio1")
 
 l=4;  n1=0;  xy1=-100;  xy2=-30
 
-def ir(a,b):
+def ir(a,b): #Esta función manda, sin rayar, a la tortuga a una posición
     penup()
     goto(a,b)
     pendown()
 
-def poligono(a,n,m):
+def poligono(a,n,m): #Forma un cuadrado de m lados con longitudes 2a
     while(n<m):
         forward(-2*a)
         left(90)
