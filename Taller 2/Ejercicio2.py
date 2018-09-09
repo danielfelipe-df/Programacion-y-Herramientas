@@ -23,7 +23,7 @@ def poligono1(x,n1,l1): #Ayuda a formar un cuadrado de m lados con longitudes 2a
 
 l2=input("Número de lados del polígono: ")
 
-l1=4;  n1=0;  xy1=-100;  
+l1=4;  n1=0;  xy1=-100;      
 p2=int(l2);  teta2=360/p2;  beta2=(p2-2)*180/p2;   xy2=-30;  
 d2=2*xy2*abs(sin(radians(beta2/2))/sin(radians(teta2)));
 h2=d2*abs(sin(radians(beta2/2)))  
