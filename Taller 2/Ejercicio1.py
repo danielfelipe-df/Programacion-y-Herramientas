@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: -utf8 -*-
+
 from turtle import *
 from math import *
 
@@ -9,7 +12,7 @@ def ir(a,b): #Esta función manda, sin rayar, a la tortuga a una posición
     goto(a,b)
     pendown()
 
-def poligono(a,n,m): #Forma un cuadrado de m lados con longitudes 2a
+def poligono(a,n,m): #Forma un cuadrado con lados de longitudes 2a
     while(n<m):
         forward(-2*a)
         left(90)
@@ -23,6 +26,9 @@ while(n1<l):
     n2=0
     poligono(xy2,n2,l)
     ir(xcor()-copysign(xy2,xcor()),ycor()-copysign(xy2,ycor()))
+    #Si se desea ver el cuadrado grande, basta con comentar el 'penup()' que aparece a continuación.
     penup()
     poligono(xy1,n1,1+n1)
     n1+=1
+
+exitonclick()

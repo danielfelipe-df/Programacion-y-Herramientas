@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: -utf8 -*-
+
 from turtle import *
 from math import *
 
@@ -39,6 +42,9 @@ while(n1<p1):
     n2=0
     poligono2(xy2,n2,l2,teta2)
     ir(xcor()-xy2,ycor()-h2)
+    #Si se desea ver el polígono grande, basta con comentar el 'penup()' que aparece a continuación.
     penup()
     poligono1(xy1,n1,1+n1,beta1)
     n1+=1
+
+exitonclick()
