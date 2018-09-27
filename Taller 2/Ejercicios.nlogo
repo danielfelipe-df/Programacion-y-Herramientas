@@ -1,10 +1,25 @@
 to setup
   clear-all
   reset-ticks
+  create-turtles 1 [
+    set color black
+  ]
 end
 
 to go1
+  let xy1 -100   let l 4   let n1 0   let xy2 -30
 
+  ir xy1 xy1
+  while n1 < l [
+    ir xcor() + copysign(xy2,xcor()) ycor() + copysign(xy2,ycor())
+    let n2 0
+    poligono xy2 n2 l
+    ir xcor()-copysign(xy2,xcor()) ycor()-copysign(xy2,ycor())
+    ;;Si se desea ver el cuadrado grande, basta con comentar el 'penup()' que aparece a continuación.
+    penup()
+    poligono xy1 n1 1 + n1
+    let n1 n1 + 1
+  ]
 end
 
 to go2
@@ -23,6 +38,18 @@ to go5
 
 end
 
+to ir [a b] ;;Esta función manda, sin rayar, a la tortuga a una posición
+    penup()
+    goto(a,b)
+    pendown()
+end
+
+to poligono [a n m] ;;Forma un cuadrado con lados de longitudes 2a
+    while(n<m):
+        forward(-2 * a)
+        left(90)
+        let n n + 1
+end
 @#$#@#$#@
 GRAPHICS-WINDOW
 210
